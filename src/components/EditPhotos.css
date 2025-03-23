@@ -1,0 +1,345 @@
+.edit-page {
+  min-height: 100vh;
+  background-color: #E2F3F4;
+  display: flex;
+}
+
+.edit-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex: 1;
+}
+
+.preview-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.photostrip-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 250px;
+  height: 80%;
+}
+
+.photo-frame {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  margin-bottom: 8px;
+  border: 2px solid transparent;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.photo-frame.selected {
+  border-color: #4CAF50;
+}
+
+.controls-section {
+  width: 400px;
+  padding: 20px;
+  margin-right: 200px;
+}
+
+.control-group {
+  margin-bottom: 30px;
+}
+
+.control-group h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.stickers-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sticker-button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.sticker-button:hover {
+  transform: scale(1.1);
+  border-color: #4CAF50;
+}
+
+.sticker-button.selected {
+  border-color: #4CAF50;
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.color-options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.color-button {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color-button.selected {
+  border-color: #4CAF50;
+}
+
+.confirm-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.filter-options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background: black;
+  color: white;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.filter-button.selected {
+  background: #4CAF50;
+}
+
+.date-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+  background-color: #4CAF50;
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(26px);
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.preview-button,
+.download-button,
+.retake-button {
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 50px;
+}
+
+.preview-button {
+  background-color: #6DC7D1;
+  color: white;
+}
+
+.download-button {
+  background-color: #00A3B4;
+  color: white;
+}
+
+.retake-button {
+  background-color: #E6A94E;
+  color: white;
+}
+
+.date-stamp {
+  text-align: center;
+  font-family: 'Handlee', cursive;
+  color: #666;
+  margin-top: 10px;
+}
+
+.sticker {
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.preview-mode {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  scale: 1;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.7);
+}
+
+.preview-controls {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1001;
+}
+
+.exit-preview-button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  background-color: #E6A94E;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Add hover effect for stickers when not in preview mode */
+.sticker:not(.preview-mode .sticker):hover {
+  scale: 1.1;
+}
+
+.sticker-spot {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sticker-spot:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sticker-spot.selected {
+  background-color: rgba(76, 175, 80, 0.3);
+}
+
+@media (max-width: 768px) {
+  .edit-container {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .controls-section {
+    width: 100%;
+  }
+
+  .photostrip-preview {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: #111;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}

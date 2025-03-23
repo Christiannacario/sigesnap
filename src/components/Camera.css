@@ -1,0 +1,223 @@
+.camera-page {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #E2F3F4;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  width: 100%;
+}
+
+.logo {
+  font-size: 24px;
+  color: #333;
+  font-family: 'Handlee', cursive;
+}
+
+.nav-links a {
+  color: #666;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.camera-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+  width: 100%;
+}
+
+.camera-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.camera-preview {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  background-color: #A3A3A3;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.capture-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(163, 163, 163, 0.8);
+  color: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.capture-button {
+  background-color: #6DC7D1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  justify-content: center;
+}
+
+.capture-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.capture-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.photo-indicators {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.indicator {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.indicator.filled {
+  background-color: #E6E8F0;
+  border-color: #E6E8F0;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 14px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.heart {
+  color: red;
+  display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 20px;
+  }
+
+  .camera-preview {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .capture-button {
+    width: 90%;
+  }
+}
+
+.final-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 640px;
+  justify-content: center;
+}
+
+.edit-button, .retake-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+  justify-content: center;
+}
+
+.edit-button {
+  background-color: #6DC7D1;
+  color: white;
+}
+
+.retake-button {
+  background-color: #A3A3A3;
+  color: white;
+}
+
+.final-preview {
+  background-color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.final-message {
+  color: white;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.edit-button:hover, .retake-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}

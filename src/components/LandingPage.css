@@ -1,0 +1,173 @@
+.landing-container {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #E2F3F4;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  color: #333;
+  font-family: 'Handlee', cursive;
+}
+
+.nav-links a {
+  color: #666;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 48px;
+  color: #333;
+  font-family: 'Handlee', cursive;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 300px;
+  z-index: 2;
+}
+
+.camera-btn, .upload-btn {
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.camera-btn {
+  background-color: #6DC7D1;
+  color: white;
+}
+
+.upload-btn {
+  background-color: #E6A94E;
+  color: white;
+}
+
+.camera-btn:hover, .upload-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.preview-container {
+  position: fixed;
+  right: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1;
+}
+
+.preview-frame {
+  width: 300px;
+  height: 200px;
+  border: 2px dashed #333;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.frame1 {
+  transform: rotate(5deg);
+}
+
+.frame2 {
+  transform: rotate(-3deg);
+  margin-top: -20px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  z-index: 10;
+}
+
+.heart {
+  color: red;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .preview-container {
+    display: none;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .buttons-container {
+    padding: 0 20px;
+  }
+
+  .header {
+    padding: 20px;
+  }
+}
