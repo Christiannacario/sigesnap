@@ -275,7 +275,7 @@ function EditPhotos() {
       )}
 
       <footer className="footer">
-        <span>Made with <span className="heart">❤️</span> by @chqnn</span>
+        <span>Made with <span className="heart">👽</span> by @chqnn</span>
       </footer>
 
       <AboutModal 

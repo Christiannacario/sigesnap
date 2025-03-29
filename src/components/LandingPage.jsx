@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AboutModal from './AboutModal';
 import './LandingPage.css';
-import logo from './logo3.png'
-import logo2 from './logo4.png'
+import logo from './logo5.webp'
+import logo2 from './logo6.jpg'
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -39,7 +39,7 @@ function LandingPage() {
 
         <div className="preview-container">
           <div className="preview-frame frame1">
-            <img src={logo} alt="Your Image" style={{ width: '100%', height: 'auto' }} />
+            <img src={logo} alt="Your Image" style={{ width: '100%', height: '100%' }} />
           </div>
           <div className="preview-frame frame2">
             <img src={logo2} alt="Your Image" style={{ width: '100%', height: '102%' ,}} />
@@ -48,7 +48,7 @@ function LandingPage() {
       </div>
 
       <footer className="footer">
-        Made <span className="heart">❤️</span> by @chqnn
+        Made <span className="heart">👽</span> by @chqnn
       </footer>
 
       <AboutModal 
